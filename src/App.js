@@ -8,6 +8,9 @@ import DemoProps from './Props/DemoProps';
 import BT2ProductList from './Props/BT2ProductList/BT2ProductList';
 import DemoPropsFunction from './Props/DemoPropsFunction/DemoPropsFunction';
 import BTGioHang from './BTGioHang/BTGioHang';
+import BTCar from './BTCar/BTCar';
+import BaiTapGioHangRedux from './ReduxDemo/BaiTapGioHang/BaiTapGioHangRedux';
+import BTGameBauCua from './ReduxDemo/BTGameBauCua/BTGameBauCua';
 
 function App() {
     return ( 
@@ -19,8 +22,13 @@ function App() {
         <EXRenderMap></EXRenderMap>
         <DemoProps></DemoProps>
         <BT2ProductList></BT2ProductList>
-        <DemoPropsFunction></DemoPropsFunction>*/}
-        <BTGioHang></BTGioHang>
+        <DemoPropsFunction></DemoPropsFunction>
+        
+          <BTGioHang></BTGioHang>   
+          
+          <BTCar></BTCar>
+          <BaiTapGioHangRedux></BaiTapGioHangRedux>*/}
+          <BTGameBauCua></BTGameBauCua>
       </div>
     );
 }

@@ -10,12 +10,23 @@ export default class Modal extends Component {
                 <td>{sp.maSP}</td>
                 <td><img width="50px" height="50px" src={sp.hinhAnh} alt="" /></td>
                 <td>{sp.tenSP}</td>
-                <td>{sp.soLuong}</td>
+                <td>
+                
+                    <button className="btn btn-success" onClick={()=>{this.props.tangGiamSoLuong(sp.maSP, true)}}>+</button>
+                    {sp.soLuong}
+                    <button className="btn btn-success" onClick={()=>{this.props.tangGiamSoLuong(sp.maSP, false)}}>-</button>
+                </td>
                 <td>{sp.gia}</td>
                 <td>{sp.gia*sp.soLuong}</td>
-                <td><button className="btn btn-danger">Xóa</button></td>
+                <td><button className="btn btn-danger" onClick={()=>{this.props.xoaGioHang(sp.maSP)}}>Xóa</button></td>
             </tr>
         })
+    }
+
+    tinhTongTien=()=>{
+        return this.props.gioHang.reduce((tongTien, spGH, index)=>{
+            return tongTien += spGH.soLuong * spGH.gia;
+        }, 0)
     }
     render() {
         return (
@@ -34,6 +45,13 @@ export default class Modal extends Component {
                     <tbody>
                         {this.renderGioHang()}
                     </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colSpan="5"></td>
+                            <td><h5>Tổng tiền:</h5></td>
+                            <td>{this.tinhTongTien().toLocaleString()}</td>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
         )
