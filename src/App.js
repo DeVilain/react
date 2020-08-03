@@ -12,6 +12,7 @@ import BTCar from './BTCar/BTCar';
 import BaiTapGioHangRedux from './ReduxDemo/BaiTapGioHang/BaiTapGioHangRedux';
 import BTGameBauCua from './ReduxDemo/BTGameBauCua/BTGameBauCua';
 import BTXucXac from './ReduxDemo/BTGameXucXac/BTXucXac';
+import Form_Validation from './Form_Validation/Form_Validation';
 
 function App() {
     return ( 
@@ -24,14 +25,15 @@ function App() {
         <DemoProps></DemoProps>
         <BT2ProductList></BT2ProductList>
         <DemoPropsFunction></DemoPropsFunction>
-        
+
+          {* REDUX *}
           <BTGioHang></BTGioHang>   
           <BTCar></BTCar>
-
           <BaiTapGioHangRedux></BaiTapGioHangRedux>
+          <BTGameBauCua></BTGameBauCua>
+          <BTXucXac></BTXucXac>*/}
 
-          <BTGameBauCua></BTGameBauCua>*/}
-          <BTXucXac></BTXucXac>
+          <Form_Validation></Form_Validation>
       </div>
     );
 }

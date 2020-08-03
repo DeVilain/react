@@ -1,37 +1,51 @@
 import React, { Component } from 'react'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
-export default class BanCuoc extends Component {
+class BanCuoc extends Component {
+
     render() {
+        let quanCuoc = this.props;
         return (
             <div className="container">
                 <h3 className="display-4 text-center">Bài tập game xúc xắc</h3>
                 <div className="row text-center">
                     <div className="col-4">
-                        <button className="p-5 btn bg-danger text-light">
-                            <p className="display-4">TÀI</p>
+                        <button className="p-5 btn bg-danger text-light" onClick={()=>{this.props.dispatch({
+                            type:'DAT_CUOC_XUC_XAC',
+                            banChon: 'TÀI'
+                        })}}>
+                            <p className="display-4">Tài</p>
                         </button>
                     </div>
                     <div className="col-4">
-                        <img src="./img/gameXucXac/1.png" alt="" width={50} height={50} style={{borderRadius:'10px'}}/>
-                        <img src="./img/gameXucXac/2.png" alt="" width={50} height={50} style={{borderRadius:'10px'}}/>
-                        <img src="./img/gameXucXac/3.png" alt="" width={50} height={50} style={{borderRadius:'10px'}}/>
+                        {/** cách viết trực tiếp */}
+                        {this.props.mangXucXac.map((xucXac, index) => (
+                            <img src={xucXac.hinhAnh} key={index} width={50} height={50} alt="" />
+                        ))}
                     </div>
                     <div className="col-4">
-                        <button className="p-5 btn bg-dark text-light">
-                            <p className="display-4">XỈU</p>
+                        <button className="p-5 btn bg-dark text-light" onClick={()=>{this.props.dispatch({
+                            type:'DAT_CUOC_XUC_XAC',
+                            banChon:'XỈU'
+                        })}}>
+                            <p className="display-4">Xỉu</p>
                         </button>
                     </div>
                 </div>
+                
+
             </div>
         )
     }
 }
 
-/*const mapStateToProps = (state)=>{
+const mapStateToProps = (state) => {
     return {
-
+        mangXucXac: state.BTGameXucXacReducer.mangXucXac,
+        banChon: state.BTGameXucXacReducer.banChon
     }
-}
+} // state => {return{key: value}} ~~ state => ({key:value})
 
-export default connect()*/
+
+
+export default connect(mapStateToProps)(BanCuoc);
