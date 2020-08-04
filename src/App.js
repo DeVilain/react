@@ -12,6 +12,7 @@ import BTCar from './BTCar/BTCar';
 import BaiTapGioHangRedux from './ReduxDemo/BaiTapGioHang/BaiTapGioHangRedux';
 import BTGameBauCua from './ReduxDemo/BTGameBauCua/BTGameBauCua';
 import BTXucXac from './ReduxDemo/BTGameXucXac/BTXucXac';
+import Validation_Form from './Validation_Form/Validation_Form';
 
 function App() {
     return ( 
@@ -27,11 +28,11 @@ function App() {
         
           <BTGioHang></BTGioHang>   
           <BTCar></BTCar>
-
           <BaiTapGioHangRedux></BaiTapGioHangRedux>
+          <BTGameBauCua></BTGameBauCua>
+          <BTXucXac></BTXucXac>*/}
 
-          <BTGameBauCua></BTGameBauCua>*/}
-          <BTXucXac></BTXucXac>
+        <Validation_Form></Validation_Form>
       </div>
     );
 }
