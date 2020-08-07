@@ -1,0 +1,13 @@
+===== LIFE CYCLE =====
+
+Nguyên nhân lỗi giao diện không nhập đc
+	+ Khi thay đổi dữ liệu input => setState được gọi => giao diện sẽ render lại (1)
+	+ Mặc khác value của các input trên giao diện đang đc lấy từ redux (2)
+	+ Theo Life Cycle React class component thì khi setState được gọi, render sẽ chạy lại, nhưng render đang theo dõi props từ redux(nguoiDungEdit) (3)
+	Từ (1) (2) (3) => vòng lặp được sinh ra -> người dùng gõ phím => setState được gọi => render chạy lại
+			=> render lại lấy dữ liệu từ redux qua props (nguoiDung) edit => luôn load lại dữ liệu cũ.
+
+Khắc phục:
+	props: nguoiDungEdit => Mỗi khi click chỉnh sửa thì nó thay đổi
+	state.values: dữ liệu của người dùng LifeCycle cũ:
+	Bằng 1 cách nào đó trước khi giao diện gọi hàm render ta lấy đc props gắn vào state => sau đó binding giá trị giao diện ra từ state.values

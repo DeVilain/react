@@ -13,6 +13,7 @@ import BaiTapGioHangRedux from './ReduxDemo/BaiTapGioHang/BaiTapGioHangRedux';
 import BTGameBauCua from './ReduxDemo/BTGameBauCua/BTGameBauCua';
 import BTXucXac from './ReduxDemo/BTGameXucXac/BTXucXac';
 import Validation_Form from './Validation_Form/Validation_Form';
+import ReactLifeCycle from './ReactLifeCycle/ReactLifeCycle';
 
 function App() {
     return ( 
@@ -30,8 +31,10 @@ function App() {
           <BTCar></BTCar>
           <BaiTapGioHangRedux></BaiTapGioHangRedux>
           <BTGameBauCua></BTGameBauCua>
-          <BTXucXac></BTXucXac>*/}
+          <BTXucXac></BTXucXac>
 
+        
+        <ReactLifeCycle></ReactLifeCycle>*/}
         <Validation_Form></Validation_Form>
       </div>
     );

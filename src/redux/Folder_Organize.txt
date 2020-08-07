@@ -1,0 +1,2 @@
+folder actions: Chứa các actions 
+	+ folder types: Chứa các tên chức năng
