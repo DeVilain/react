@@ -3,6 +3,7 @@ import BaiTapGioHangReducer from './BaiTapGioHangReducer';
 import BTGameBauCuaReducer from './BTGameBauCuaReducer';
 import BTGameXucXacReducer from './BTGameXucXacReducer';
 import BTQuanLyNguoiDungReducer from './BTQuanLyNguoiDungReducer';
+import BurgerReducer from './BurgerReducer';
 
 const rootReducer = combineReducers({
     GioHangReducer: BaiTapGioHangReducer,
@@ -11,7 +12,9 @@ const rootReducer = combineReducers({
 
     BTGameXucXacReducer,
 
-    BTQuanLyNguoiDungReducer
+    BTQuanLyNguoiDungReducer,
+
+    BurgerReducer
 });
 
 export default rootReducer;

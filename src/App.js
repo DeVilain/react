@@ -14,6 +14,7 @@ import BTGameBauCua from './ReduxDemo/BTGameBauCua/BTGameBauCua';
 import BTXucXac from './ReduxDemo/BTGameXucXac/BTXucXac';
 import Validation_Form from './Validation_Form/Validation_Form';
 import ReactLifeCycle from './ReactLifeCycle/ReactLifeCycle';
+import BaiTapBurger from './BaiTapBurger/BaiTapBurger';
 
 function App() {
     return ( 
@@ -34,8 +35,9 @@ function App() {
           <BTXucXac></BTXucXac>
 
         
-        <ReactLifeCycle></ReactLifeCycle>*/}
-        <Validation_Form></Validation_Form>
+        <ReactLifeCycle></ReactLifeCycle>
+        <Validation_Form></Validation_Form>*/}
+        <BaiTapBurger></BaiTapBurger>
       </div>
     );
 }
